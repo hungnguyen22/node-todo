@@ -42,10 +42,26 @@
 
 				<div class="checkbox"  ng-repeat="todo in todos">
                                   <label>
-                                  <input type="checkbox"> {{ todo.text }}
+                                  <input type="checkbox" ng-click = "deleteTodo(todo._id)" > {{ todo.text }}
                                   </label>
                                  </div>
-                             
+         
+            <div class="checkbox"  ng-repeat="todo in todos">
+                                  <label>
+                                  <input type="checkbox" ng-click = "deleteTodo(todo._id)" > {\
+{ todo.text }}
+                                  </label>
+                                 </div>
+
+
+ 
+
+
+
+
+
+
+                    
 				<p class="text-center" ng-show="loading">
 					<span class="fa fa-spinner fa-spin fa-3x"></span>
 				</p>
@@ -70,7 +86,13 @@
 		</div>
 
 
+	</div class = "text-center text-muted">
+         
+        
+	
 	</div>
+
+</div>
 
 </body>
 </html>

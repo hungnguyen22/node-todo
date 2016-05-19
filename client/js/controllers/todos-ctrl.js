@@ -36,3 +36,16 @@ angular.module('todoController', [])
 		};
 
 	}]);
+// Delete
+
+
+$scope.deleteTodo = function(id){
+$scope.loading = true;
+Todos.delete(id)
+
+.success(function(data){
+	$scope.loading = false;
+	$scope.todos = data; // assign our new list of todos
+	});
+    };
+	 }]);
